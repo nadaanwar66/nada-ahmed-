@@ -59,7 +59,7 @@ class MagicalContactBook:
         self.__contacts = []  
 
     def add_contact(self, contact):
-        self.__contacts.append(contact)  
+        self.__contacts.append(contact) 
 
     def list_contacts(self):
         for contact in self.__contacts:
@@ -71,6 +71,19 @@ class MagicalContactBook:
                 contact.describe()
                 return
         print("Contact not found.")
+book = MagicalContactBook()
+
+wand1 = {"length": "11 inches", "wood": "Holly", "core": "phoenix feather"}
+harry = WizardOrWitch("Harry Potter", "harry@.com", "123456789", wand1, "Gryffindor")
+
+dobby = Magicalcreature("Dobby", "dobby@email.com", "987654321", "House Elf", True)
+
+book.add_contact(harry)
+book.add_contact(dobby)
+
+book.list_contacts()
+book.find_contact("Dobby")
+
 
   
     
