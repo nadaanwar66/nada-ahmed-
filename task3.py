@@ -4,8 +4,27 @@ class Magical_contacnt_book:
         self.__email= email
         self.__phone_num= phone_num
     def get_name(self):
+        return self.__name
     def get_email(self):
+        return self.__email
+    def get_phone_num(self):
+        return self.__phone_num
+    def set_email(self,new_email):
+        self.__email= new_email
+    def set_phone_num(self,new_phone_number):
         self.__phone_num = new_phone_number
+    def describe(self):
+        print(f"hello my name is{self.__name}, my email is {self.__email}, my phone number is{self.__phone_num}")
+
+class WizardOrWitch(Magical_contacnt_book):  
+    def __init__(self, name, email, phone_num, wand, house):
+        super().__init__(name, email, phone_num)
+
+        valid_houses = ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"]
+        if house not in valid_houses:
+            print("Invalid house provided!") 
+
+        self.__wand = wand
         self.__house = house
 
     def get_wand(self):
